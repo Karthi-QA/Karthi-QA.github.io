@@ -451,11 +451,35 @@ footer a:hover {
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 130;
-      if (window
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
 
+    if (current) {
+      setActiveLink(current);
+    }
+
+    /* Back to Top visibility */
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  /* Back to Top click */
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
   
 </body>
 </html>
+
 
 
 
