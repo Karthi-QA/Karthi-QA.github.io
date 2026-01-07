@@ -54,6 +54,30 @@
   opacity: 0.75;
 }
 
+    .header-content.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-content.center h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header-content.center p {
+  margin: 4px 0 8px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.header-content.center nav a {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+
   section {
     max-width: 1000px;
     margin: auto;
@@ -69,15 +93,16 @@
     scroll-margin-top: 90px;
   }
 
-    footer {
+  footer {
   background: #0f172a;
   color: #ffffff;
   text-align: center;
-  padding: 25px 15px;
+  padding: 15px 10px; /* matches header */
 }
 
 .footer-content p {
-  margin: 6px 0;
+  margin: 4px 0;
+  font-size: 14px;
 }
 
 footer a {
@@ -89,17 +114,16 @@ footer a:hover {
   opacity: 0.8;
 }
 
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="header-content">
-    <div class="header-left">
+  <div class="header-content center">
       <h1>Karthikeyan P A</h1>
       <p>Automation Test Engineer</p>
-    </div>
 
     <nav>
       <a href="#skills">Tech</a>
@@ -319,19 +343,25 @@ footer a:hover {
 
 <footer>
   <div class="footer-content" id="contact">
-    <p>📍 Chennai, India</p>
-    <p>📞 <a href="tel:+918270476292">+91 8270476292</a></p>
-    <p>📧 <a href="mailto:knkarthi446@gmail.com">knkarthi446@gmail.com</a></p>
     <p>
+      📍 Chennai, India &nbsp; | &nbsp;
+      📞 <a href="tel:+918270476292">+91 8270476292</a>
+    </p>
+
+    <p>
+      📧 <a href="mailto:knkarthi446@gmail.com">knkarthi446@gmail.com</a>
+      &nbsp; | &nbsp;
       🔗 <a href="https://www.linkedin.com/in/karthikeyan" target="_blank">
-        linkedin.com/in/karthikeyan
+        LinkedIn
       </a>
     </p>
   </div>
 </footer>
 
+
 </body>
 </html>
+
 
 
 
