@@ -27,6 +27,20 @@
     z-index: 1000;
   }
 
+    .card p {
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+    .card ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
   .header-left h1 {
   margin: 0;
   font-size: 22px;
@@ -86,19 +100,24 @@
 }
 
   section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px 20px;
-  }
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
 
   .card {
     background: #ffffff;
     padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     scroll-margin-top: 90px;
   }
+    .card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 
   footer {
   background: #0f172a;
@@ -120,6 +139,11 @@ footer a {
 footer a:hover {
   opacity: 0.8;
 }
+    .about-hero {
+  background: #eef2ff;
+  border-left: 4px solid #2563eb;
+}
+
 
     @media (max-width: 600px) {
   .header-content.center nav {
@@ -184,15 +208,16 @@ footer a:hover {
 
 <section>
 
-  <div class="card">
-    <h2>Professional Summary</h2>
-    <p>
-      Automation Test Engineer with 3 years of experience in designing, developing, and maintaining
-      Selenium automation frameworks using Java. Strong expertise in TestNG, Maven, CI/CD pipelines
-      (Jenkins), REST API testing, and Agile methodologies. Proven ability to automate regression suites,
-      build reusable frameworks, and collaborate effectively with development and QA teams.
-    </p>
-  </div>
+  <div class="card about-hero">
+  <h2>About Me</h2>
+  <p>
+    I am an <strong>Automation Test Engineer</strong> with 3+ years of experience building
+    reliable Selenium automation frameworks using Java. I specialize in creating scalable
+    test solutions, improving regression efficiency, and ensuring stable, high-quality
+    enterprise software releases. Currently working on enterprise optimization products, with hands-on
+    experience in UI, API, CI/CD, Performance and security testing.
+  </p>
+</div>
 
   <div class="card">
     <h2>Technical Skills</h2>
@@ -438,6 +463,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
