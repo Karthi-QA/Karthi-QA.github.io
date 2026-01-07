@@ -422,47 +422,41 @@ footer a:hover {
   </div>
 </footer>
 <button id="backToTop" title="Back to top">↑</button>
-  <script>
-  const sections = document.querySelectorAll("section div[id], footer div[id]");
-  const navLinks = document.querySelectorAll("nav a");
 
+<script>
+  const navLinks = document.querySelectorAll("nav a");
+  const sections = document.querySelectorAll("section div[id], footer div[id]");
+  const backToTopBtn = document.getElementById("backToTop");
+
+  function setActiveLink(id) {
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + id) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  /* Handle nav click (IMPORTANT for short sections like More & Contact) */
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const targetId = link.getAttribute("href").substring(1);
+      setActiveLink(targetId);
+    });
+  });
+
+  /* Handle scroll */
   window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
+      const sectionTop = section.offsetTop - 130;
+      if (window
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
-    });
-  });
-
-    const backToTopBtn = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
-
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-</script>
-
+  
 </body>
 </html>
+
 
 
 
