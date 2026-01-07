@@ -5,57 +5,68 @@
   <title>Karthikeyan P A | Automation Test Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background-color: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #0f172a;
-      color: #ffffff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin-bottom: 5px;
-    }
-    header p {
-      margin: 5px 0;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-    h2 {
-      color: #0f172a;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 5px;
-    }
-    .card {
-      background: #ffffff;
-      padding: 20px;
-      margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    footer {
-      background: #0f172a;
-      color: #ffffff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 15px 20px; /* reduced height */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .header-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .header-left h1 {
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .header-left p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+
+  nav a {
+    margin-left: 15px;
+    color: #93c5fd;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+  }
+
+  .card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+</style>
 </head>
 
 <body>
@@ -68,6 +79,13 @@
     📧 <a href="mailto:knkarthi446@gmail.com" style="color:#93c5fd;">knkarthi446@gmail.com</a> |
     🔗 <a href="https://www.linkedin.com/in/karthikeyan-p-a-47260a218" target="_blank" style="color:#93c5fd;">LinkedIn</a>
   </p>
+  <nav>
+      <a href="#skills">Tech</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#more">More</a>
+      <a href="#resume">Resume</a>
+    </nav>
 </header>
 
 <section>
@@ -82,7 +100,7 @@
     </p>
   </div>
 
-  <div class="card">
+  <div class="card" id="skills">
     <h2>Technical Skills</h2>
     <ul>
       <li><strong>Automation Tools:</strong> Selenium WebDriver, REST Assured, Postman, Talend, Burp Suite</li>
@@ -93,7 +111,7 @@
     </ul>
   </div>
 
- <div class="card">
+ <div class="card" id="experience">
     <h2>Automation Framework Experience</h2>
     <ul>
       <li>Hybrid and Data-Driven automation frameworks</li>
@@ -106,7 +124,7 @@
     </ul>
  </div>
 
-  <div class="card">
+  <div class="card" id="experience">
   <h2>Professional Experience</h2>
 
   <p><strong>Automation Test Engineer</strong></p>
@@ -168,7 +186,7 @@
 </div>
 
 
- <div class="card">
+ <div class="card" id="projects">
   <h2>Projects</h2>
 
   <p>
@@ -246,7 +264,7 @@
 </div>
 
 
-  <div class="card">
+  <div class="card" id="more">
     <h2>Education</h2>
     <p>B.Sc. Computer Science — Alagappa University (2019 – 2022)</p>
 
@@ -284,6 +302,7 @@
 
 </body>
 </html>
+
 
 
 
