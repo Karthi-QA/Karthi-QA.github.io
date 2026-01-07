@@ -57,6 +57,10 @@
   nav a:hover {
   opacity: 0.75;
 }
+    nav a.active {
+  border-bottom: 2px solid #93c5fd;
+  padding-bottom: 2px;
+}
 
     .header-content.center {
   display: flex;
@@ -80,7 +84,6 @@
   margin: 0 10px;
   font-size: 14px;
 }
-
 
   section {
     max-width: 1000px;
@@ -139,6 +142,25 @@ footer a:hover {
   }
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  opacity: 0.85;
+}
 
 </style>
 </head>
@@ -374,9 +396,49 @@ footer a:hover {
     </p>
   </div>
 </footer>
+<button id="backToTop" title="Back to top">↑</button>
+  <script>
+  const sections = document.querySelectorAll("section div[id], footer div[id]");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+    const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
