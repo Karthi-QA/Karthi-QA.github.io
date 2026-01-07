@@ -118,6 +118,27 @@ footer a:hover {
   opacity: 0.8;
 }
 
+    @media (max-width: 600px) {
+  .header-content.center nav {
+    display: flex;
+    flex-wrap: nowrap;          /* force single line */
+    overflow-x: auto;           /* allow horizontal scroll */
+    white-space: nowrap;
+    width: 100%;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header-content.center nav::-webkit-scrollbar {
+    display: none;              /* hide scrollbar */
+  }
+
+  .header-content.center nav a {
+    margin: 0 10px;
+    flex-shrink: 0;             /* prevent shrinking */
+  }
+}
+
 
 </style>
 </head>
@@ -356,6 +377,7 @@ footer a:hover {
 
 </body>
 </html>
+
 
 
 
